@@ -1,7 +1,6 @@
 const express=require("express")
 const router=express.Router()
 const detailsModel=require("../models/detailsmodel")
-const usermodel = require("../models/usermodel")
 
 router.post("/add",async(req,res)=>{
     let data=req.body

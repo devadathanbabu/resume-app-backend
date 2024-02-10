@@ -1,5 +1,4 @@
 const mongoose=require("mongoose")
-const router = require("../controllers/userrouter")
 const detailsSchema=new mongoose.Schema(
     {
         name:{
