@@ -1,6 +1,7 @@
 const express=require("express")
 const router=express.Router()
 const detailsModel=require("../models/detailsmodel")
+const usermodel = require("../models/usermodel")
 
 router.post("/add",async(req,res)=>{
     let data=req.body
@@ -12,4 +13,9 @@ router.post("/add",async(req,res)=>{
         }
     )
 })
+router.get("/viewall",async(req,res)=>{
+    let result=await detailsModel.find()
+    res.json(result)
+})
+
 module.exports=router
